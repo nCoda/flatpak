@@ -1,0 +1,14 @@
+{
+    "name": "abjad",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/f9/3b/72def35a692f9a56f665060566beb4caa3475ec2b1030cc4a2f01b83d28a/Abjad-2.21.tar.gz",
+            "sha256": "bdb1fda835658cfbf1b84cd557e50827b78fef37c04dc4d703a7536c31c699d2"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "setuptools_scm",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/d4/96/4b253a56454d92d8477704417c490d1949ca866bda1f8696bcc5fff49613/setuptools_scm-1.15.7.tar.gz",
+            "sha256": "e163e8a12d2121f77575773cfc2b5988275dc1f1d2541fdf780127c29dbbea9c"
+        }
+    ]
+}

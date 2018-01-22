@@ -1,0 +1,14 @@
+{
+    "name": "ply",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/ce/3d/1f9ca69192025046f02a02ffc61bfbac2731aab06325a218370fd93e18df/ply-3.10.tar.gz",
+            "sha256": "96e94af7dd7031d8d6dd6e2a8e0de593b511c211a86e28a9c9621c275ac8bacb"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "tatsu",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/d4/b6/cc68e991a9fc7eeb03988c2997bf1f30744fdeca9d4f10b284478a29de7e/TatSu-4.2.5.zip",
+            "sha256": "190f144e3500ece77c66ebcd634ede16e3eec37658fe866731aba0f65a6c5526"
+        }
+    ]
+}

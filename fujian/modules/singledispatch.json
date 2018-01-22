@@ -1,0 +1,14 @@
+{
+    "name": "singledispatch",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/d9/e9/513ad8dc17210db12cb14f2d4d190d618fb87dd38814203ea71c87ba5b68/singledispatch-3.4.0.3.tar.gz",
+            "sha256": "5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "scandir",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/77/3f/916f524f50ee65e3f465a280d2851bd63685250fddb3020c212b3977664d/scandir-1.6.tar.gz",
+            "sha256": "e0278a2d4bc6c0569aedbe66bf26c8ab5b2b08378b3289de49257f23ac624338"
+        }
+    ]
+}

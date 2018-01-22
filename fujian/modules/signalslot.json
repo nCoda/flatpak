@@ -1,0 +1,14 @@
+{
+    "name": "signalslot",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/bf/b7/fe49227c746399bf932a3ff9f99cc37364285d8a9201c43f0d1e39b8fc02/signalslot-0.1.1.tar.gz",
+            "sha256": "389bbfe50bc8a740732dc0b952aeaf3f4622ac567ee68b78450e2df96abce106"
+        }
+    ]
+}

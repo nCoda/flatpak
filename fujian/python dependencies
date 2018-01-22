@@ -1,0 +1,73 @@
+
+Dependencies with no Dependencies
+=================================
+! backports-abc==0.5
+! boltons==17.1.0
+! certifi==2017.11.5
+! contexter==0.1.4
+! enum34==1.1.6
+! funcsigs==1.0.2
+! lxml==3.8.0
+! pbr==3.1.1
+! ply==3.10
+! scandir==1.6
+! setuptools_scm
+! six==1.11.0
+! weakrefmethod==1.0.3
+
+Dependencies with Dependencies
+==============================
+! lithoxyl==0.4.0
+    boltons
+! mock==2.0.0
+    funcsigs, six, pbr
+! pathlib2==2.3.0
+    six, scandir
+! pytest-runner
+    setuptools_scm
+! signalslot==0.1.1
+    six, contexter, weakrefmethod
+! singledispatch==3.4.0.3
+! TatSu==4.2.5
+    pytest-runner
+! tornado==4.5.2
+    certifi, singledispatch, backports-abc
+! Abjad==2.21
+    funcsigs, pathlib2, six, ply, enum34, mock
+Lychee -e git+ssh://vcs@goldman.ncodamusic.org/diffusion/LC/lychee.git@907897ef1e92c4c7ed318bdf4a43887b041a51e1#egg=Lychee
+    Abjad, tatsu, lithoxyl, lxml, signalslot, six
+Fujian -e git+ssh://vcs@goldman.ncodamusic.org/diffusion/FJ/fujian.git@1b73322684d0696247154e053e1d72fbf15236e9#egg=Fujian
+    lychee, tornado
+
+
+
+
+# These are all related to development, documentation, and tests:
+#
+# alabaster==0.7.10
+# attrs==17.3.0
+# Babel==2.5.1
+# chardet==3.0.4
+# coverage==4.0.3
+# docutils==0.14
+# idna==2.6
+# imagesize==0.7.1
+# Jinja2==2.10
+# MarkupSafe==1.0
+# mercurial==3.9.2
+# -e git+ssh://vcs@goldman.ncodamusic.org/diffusion/10/mercurial-hug.git@e617f3620f378f1b99b0263fa42aa73638636505#egg=mercurial_hug
+# pluggy==0.6.0
+# py==1.5.2
+# Pygments==2.2.0
+# pytest==3.3.0
+# pytest-cov==2.5.1
+# python-coveralls==2.9.1
+# pytz==2017.3
+# PyYAML==3.12
+# requests==2.18.4
+# snowballstemmer==1.2.1
+# Sphinx==1.6.5
+# sphinxcontrib-websupport==1.0.1
+# typing==3.6.2
+# urllib3==1.22
+# versioneer==0.18

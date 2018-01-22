@@ -1,0 +1,14 @@
+{
+    "name": "lithoxyl",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/25/83/d86e47a4f801ec6fb5f8b8f24d23b216f302bee9bea91282344d86784995/lithoxyl-0.4.1.tar.gz",
+            "sha256": "4284c05bfea9b86ba2c7f836f6e7c0a2b4dc04cf7601bc11206246f62bd2f758"
+        }
+    ]
+}

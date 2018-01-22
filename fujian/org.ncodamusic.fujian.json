@@ -1,0 +1,74 @@
+{
+    "app-id": "org.ncodamusic.fujian",
+    "branch": "stable",
+    "runtime": "org.freedesktop.Sdk",
+    "runtime-version": "1.6",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "ncoda",
+    "separate-locales": false,
+    "finish-args": [
+        "--share=network"
+    ],
+    "modules": [
+        "modules/backports-abc.json",
+        "modules/boltons.json",
+        "modules/certifi.json",
+        "modules/contexter.json",
+        "modules/enum34.json",
+        "modules/funcsigs.json",
+        "modules/lxml.json",
+        "modules/pbr.json",
+        "modules/ply.json",
+        "modules/scandir.json",
+        "modules/setuptools_scm.json",
+        "modules/six.json",
+        "modules/weakrefmethod.json",
+        "modules/pathlib2.json",
+        "modules/singledispatch.json",
+        "modules/pytest-runner.json",
+        "modules/tatsu.json",
+        "modules/lithoxyl.json",
+        "modules/mock.json",
+        "modules/signalslot.json",
+        "modules/tornado.json",
+        "modules/abjad.json",
+        {
+            "name": "lychee",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/bin",
+                "pip2 install --no-index --install-option='--prefix=/app' ."
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "path": "sources/Lychee-0.7.1.tar.gz",
+                    "sha256": "dbc55ce99661586ae6ecdae7c1e7b038efc12e320a385fad2492ea75209f7c02"
+                }
+            ]
+        },
+        {
+            "name": "fujian",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/bin",
+                "install ncoda /app/bin",
+                "pip2 install --no-index --install-option='--prefix=/app' ."
+            ],
+            "sources": [
+                {
+                    "type": "script",
+                    "dest-filename": "ncoda",
+                    "commands": [
+                        "python -m fujian"
+                    ]
+                },
+                {
+                    "type": "archive",
+                    "path": "sources/Fujian-2.0.1.tar.gz",
+                    "sha256": "7a2e2834356777aa45163f536cb5009093a64ab3f9abec0ba81d5e5e5b6ccee3"
+                }
+            ]
+        }
+    ]
+}

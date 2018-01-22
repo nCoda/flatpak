@@ -1,0 +1,14 @@
+{
+    "name": "contexter",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/83/8e/fa97d40616c8d1bda8f83b12ab0ccf9fe0420cb89cf73184436bd3c581fe/contexter-0.1.4.tar.gz",
+            "sha256": "c730890b1a915051414a6350d8ea1cddca7d01d8f756badedb30b9bf305ea0a8"
+        }
+    ]
+}

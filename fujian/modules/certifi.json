@@ -1,0 +1,14 @@
+{
+    "name": "certifi",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/23/3f/8be01c50ed24a4bd6b8da799839066ce0288f66f5e11f0367323467f0cbc/certifi-2017.11.5.tar.gz",
+            "sha256": "5ec74291ca1136b40f0379e1128ff80e866597e4e2c1e755739a913bbc3613c0"
+        }
+    ]
+}

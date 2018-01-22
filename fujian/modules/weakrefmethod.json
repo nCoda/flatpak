@@ -1,0 +1,14 @@
+{
+    "name": "weakrefmethod",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip2 install --no-index --install-option='--prefix=/app' ."
+    ],
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://pypi.python.org/packages/99/82/73a21e3eab9a1ff76d12375f7301fba5c6325b9598eed0ae5b0cf5243656/weakrefmethod-1.0.3.tar.gz#md5=39e7450191dea0b17a646b929784ac6f",
+            "sha256": "37bc1fbb5575acf82172d4eb7b6fc4412d77d5a1d70dff2c1f8a4574301cda66"
+        }
+    ]
+}
