@@ -1,0 +1,68 @@
+{
+    "app-id": "org.ncodamusic.ncoda",
+    "branch": "stable",
+    "base": "io.atom.electron.BaseApp",
+    "base-version": "stable",
+    "runtime": "org.freedesktop.Sdk",
+    "runtime-version": "1.6",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "ncoda",
+    "separate-locales": false,
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--share=network",
+        "--device=dri",
+        "--filesystem=home",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*",
+        "--env=ELECTRON_TRASH=gio"
+    ],
+    "modules": [
+        "../fujian/root_module.json",
+        {
+            "name": "julius",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/ncoda",
+                "install julius /app/bin",
+                "install -t /app/lib libffmpeg.so libnode.so",
+                "install -t /app/share/ncoda LICENSE LICENSES.chromium.html version",
+
+                "echo 'TODO: figure out how to install the following items properly'",
+                "install blink_image_resources_200_percent.pak /app/bin",
+                "install content_shell.pak /app/bin",
+                "mv locales /app/bin",
+                "install snapshot_blob.bin /app/bin",
+                "install content_resources_200_percent.pak /app/bin",
+                "install icudtl.dat /app/bin",
+                "install natives_blob.bin /app/bin",
+                "mv resources /app/bin",
+                "install ui_resources_200_percent.pak /app/bin",
+                "install views_resources_200_percent.pak /app/bin"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "path": "sources/julius-packaged.tar.gz"
+                }
+            ]
+        },
+        {
+            "name": "ncoda",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install ncoda /app/bin"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "sources/ncoda"
+                }
+            ]
+        }
+    ]
+}

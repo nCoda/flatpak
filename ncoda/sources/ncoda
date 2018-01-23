@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+"""
+Run nCoda.
+
+Copyright 2018 Christopher Antila
+"""
+
+from datetime import datetime
+# import pathlib
+# import shutil
+import subprocess
+import time
+
+
+APP_NAME = 'nCoda'
+APP_VERSION = 'something'  # TODO: figure out how to set this at build time
+# APP_VERSION = datetime.utcnow().strftime('%y%m-%d.%H%M')
+
+# Number of seconds between checking whether Fujian or Julius has exited.
+_POLL_TIMEOUT = 1
+
+_STARTUP_TEXT = """
+{app_name} v{app_version}
+
+Copyright 2015 to 2018, nCoda Contributors.
+
+TODO: Say something about licensing.
+""".format(app_name=APP_NAME, app_version=APP_VERSION)
+
+
+def main():
+    """
+    Run nCoda.
+    """
+    procs = []
+    try:
+        procs = [
+            subprocess.Popen(['python2', '-m' 'fujian']),
+            subprocess.Popen(['julius']),
+        ]
+        while True:
+            for proc in procs:
+                proc.poll()
+            if any([proc.returncode is not None for proc in procs]):
+                break
+            time.sleep(_POLL_TIMEOUT)
+    finally:
+        for proc in procs:
+            try:
+                proc.terminate()
+                proc.wait(timeout=60)
+                if proc.returncode is None:
+                    proc.kill(timeout=30)
+            except ProcessLookupError:
+                pass
+        
+        raise SystemExit()
+
+
+if __name__ == '__main__':
+    print(_STARTUP_TEXT)
+    main()
