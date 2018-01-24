@@ -1,6 +1,6 @@
 build-ncoda:
-	sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-	sudo flatpak install -y flathub io.atom.electron.BaseApp
+	flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+	flatpak install -y flathub io.atom.electron.BaseApp
 	# NOTE: in the future we may be able to add --shallow-submodules ?
 	git clone --recurse-submodules --depth 1 --branch main https://github.com/nCoda/julius.git julius-git
 	cd julius-git && npm install
