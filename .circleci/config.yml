@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install Flatpak
-        command: dnf install flatpak flatpak-builder
+          name: Install Flatpak
+          command: dnf install flatpak flatpak-builder
       - run:
-        name: Run the Makefile script
-        command: make build-ncoda
+          name: Run the Makefile script
+          command: make build-ncoda
