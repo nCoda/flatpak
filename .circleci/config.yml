@@ -6,5 +6,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run the Makefile script
+          name: Install more things.
+          command: |
+            dnf install -y nodejs npm
+      - run:
+          name: Run the Makefile script.
           command: make build-ncoda
