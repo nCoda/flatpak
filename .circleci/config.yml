@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install Flatpak
-          command: dnf install --cacheonly -y --disablerepo updates flatpak flatpak-builder
+          command: dnf install -y --disablerepo updates flatpak flatpak-builder
       - run:
           name: Run the Makefile script
           command: make build-ncoda
