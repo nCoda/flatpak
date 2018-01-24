@@ -14,6 +14,13 @@ jobs:
             flatpak install flathub org.freedesktop.Sdk 1.6
       
       - run:
+          name: Make a new user.
+          command: |
+            useradd circleci
+            sudo -s -u circleci
+            whoami
+
+      - run:
           name: Checkout Julius.
           command: make checkout-julius
       - restore_cache:
@@ -26,7 +33,7 @@ jobs:
             - "julius-git/node_modules"
           key: v1-npm-{{ checksum "julius-git/package.json" }}
           when: on_success
-      
+
       - run:
           name: Run the Makefile script.
           command: make build-ncoda
