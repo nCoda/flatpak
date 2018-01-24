@@ -2,12 +2,9 @@ version: 2
 jobs:
   build:
     docker:
-      - image: fedora:27
+      - image: crantila/fedora-flatpak
     steps:
       - checkout
-      - run:
-          name: Install Flatpak
-          command: dnf install -y --disablerepo updates flatpak flatpak-builder
       - run:
           name: Run the Makefile script
           command: make build-ncoda
