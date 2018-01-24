@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install Flatpak
-          command: dnf install -y flatpak flatpak-builder
+          command: dnf install --cacheonly -y flatpak flatpak-builder
       - run:
           name: Run the Makefile script
           command: make build-ncoda
