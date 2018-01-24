@@ -11,7 +11,11 @@ jobs:
             dnf install -y nodejs npm
             flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
             flatpak install -y flathub io.atom.electron.BaseApp
+            flatpak install flathub org.freedesktop.Sdk 1.6
       
+      - run:
+          name: Checkout Julius.
+          command: make checkout-julius
       - restore_cache:
           key: v1-npm-{{ checksum "julius-git/package.json" }}
       - run:
