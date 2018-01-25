@@ -10,7 +10,7 @@ prepare-julius-build:
 	mv julius-git/build/julius-packaged.tar.gz ncoda/sources
 
 build-ncoda:
-	cd ncoda && make build
+	# cd ncoda && make build
 	mkdir -p repo
 	flatpak build-export repo ncoda/build
 
