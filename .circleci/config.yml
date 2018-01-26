@@ -32,4 +32,6 @@ jobs:
 
       - run:
           name: Run the Makefile script.
-          command: cd ncoda && sudo -u circleci make build
+          command: |
+            "chown circleci: -R *"
+            "cd ncoda && sudo -u circleci make build"
